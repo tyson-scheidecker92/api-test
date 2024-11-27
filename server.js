@@ -1,5 +1,5 @@
-import express from "express";
-import pkg from "moment-timezone";
+const express = require("express");
+const pkg = require("moment-timezone");
 
 const { utc, tz } = pkg;
 
