@@ -18,8 +18,8 @@ app.get("/time", (req, res) => {
   return res.json({ currentTime });
 });
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 
-module.exports = app;
+module.exports = { app, server };
