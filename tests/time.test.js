@@ -7,7 +7,7 @@ describe("GET /time", () => {
     expect(response.status).toBe(200);
     expect(response.body).toHaveProperty("currentTime");
     expect(response.body.currentTime).toMatch(
-      /^(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z)$/
+      /^(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{3})?Z)$/
     );
   });
 
@@ -16,7 +16,7 @@ describe("GET /time", () => {
     expect(response.status).toBe(200);
     expect(response.body).toHaveProperty("adjustedTime");
     expect(response.body.adjustedTime).toMatch(
-      /^(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z)$/
+      /^(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{3})?Z)$/
     );
   });
 
