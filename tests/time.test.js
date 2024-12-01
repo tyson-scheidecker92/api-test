@@ -2,6 +2,10 @@ const request = require("supertest");
 const app = require("../server");
 
 describe("GET /time", () => {
+  afterAll(async () => {
+    await app.close();
+  });
+
   it("should return current time in UTC", async () => {
     const response = await request(app).get("/time");
     expect(response.status).toBe(200);
